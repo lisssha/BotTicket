@@ -28,7 +28,7 @@ async def request_complain(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
 # ответы на смс пользователя!!
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    if update.message.text == "Написать жалобу":
+    if update.message.text == ButtonText.write_complain.value:
         await request_complain(update, context)
 
     elif context.user_data.get('complain_mode', False):
