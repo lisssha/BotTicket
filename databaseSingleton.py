@@ -1,6 +1,6 @@
 import psycopg2
 from config import host, user, password, db_name
-
+#надо было через метакласс делать? 
 class DatabaseSingleton():
     _instance = None
 
